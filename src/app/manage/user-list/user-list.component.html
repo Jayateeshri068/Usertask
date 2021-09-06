@@ -1,0 +1,33 @@
+<div class="card card-inner ">
+    <div class="card-body ">
+        <div class="row">
+            
+                <div class="col-md-8">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80" class="image">        
+                </div>
+                
+                <div class="col-md-4 pass">
+                    <h2 class="text-center">User List</h2>
+
+                    <table class="table mt-5">
+                        <thead>
+                          <tr>
+                            <th scope="col">Sr.No</th>
+                            <th scope="col">User Email</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of userList;let i=index">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{item.Email}}</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+
+
+                    </div>
+            
+        </div>
+    </div>
+</div>

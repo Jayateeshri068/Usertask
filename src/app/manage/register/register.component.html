@@ -1,0 +1,47 @@
+
+
+<div class="card card-inner ">
+    <div class="card-body ">
+        <div class="row">
+            
+                <div class="col-md-8">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80" class="image">        
+                </div>
+                
+                <div class="col-md-4 pass " >
+                    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+                        <h1>Register Form</h1>
+                        <div class="log">
+                          <label for="examplename" class="form-label">Name</label>
+                          <input formControlName="Name" type="text" class="form-control"  id="examplename" placeholder="Name"> 
+                          <p class="text-danger" *ngIf="regForm.controls.Name.invalid && regForm.controls.Name.touched">Enter valid name</p>
+                        </div>
+                        
+                        <div class="log">
+                            <label for="examplemobile" class="form-label">Mobile</label>
+                            <input formControlName="Mobile" type="text" class="form-control" id="examplemobile" placeholder="Mobile"> 
+                            <p class="text-danger" *ngIf="regForm.controls.Mobile.invalid && regForm.controls.Mobile.touched">Enter valid mobile no</p>
+                          </div>
+
+                          <div class="log">
+                            <label for="exampleemail" class="form-label">Email ID</label>
+                            <input formControlName="Email" type="text" class="form-control"  id="exampleemail" placeholder="Email ID"> 
+                            <p class="text-danger" *ngIf="regForm.controls.Email.invalid && regForm.controls.Email.touched">Enter valid email id</p>
+                          </div>
+                         
+                          <div class="log">
+                            <label for="examplepassword" class="form-label">Password</label>
+                            <input formControlName="Password" type="text" class="form-control"  id="examplepassword" placeholder="Password"> 
+                            <p class="text-danger" *ngIf="regForm.controls.Password.invalid && regForm.controls.Password.touched">
+                              Password must be 8-16 characters containing uppercase, lowercase, symbol and number..!</p>
+                          </div>
+                         
+                         
+                        <button type="submit" [disabled]="!regForm.valid" class="btn btn-primary">Register Now</button>
+                      </form>
+                </div>               
+        </div>
+    </div>
+</div>
+
+

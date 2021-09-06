@@ -1,0 +1,11 @@
+.card-inner{
+    margin-left: 4rem;
+    box-shadow: 3px 3px 3px grey;
+    margin-right: 4rem;
+}
+
+.image
+{
+    height: 100%;
+    width: 100%;
+}
